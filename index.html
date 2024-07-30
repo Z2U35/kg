@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knowledge Graph Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        #sidebar {
+            width: 200px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            height: 100vh;
+        }
+        #sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        #sidebar button:hover {
+            background-color: #0056b3;
+        }
+        #sidebar button.selected {
+            background-color: #0056b3;
+            color: white;
+        }
+        #content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+        #defaultMessage {
+            font-size: 24px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebar">
+    <button onclick="showContent('交通工具.html', this)">交通工具</button>
+    <button onclick="showContent('体育设施.html', this)">体育设施</button>
+    <button onclick="showContent('其他地理.html', this)">其他地理</button>
+    <button onclick="showContent('医院.html', this)">医院</button>
+    <button onclick="showContent('历史遗址.html', this)">历史遗址</button>
+    <button onclick="showContent('国家.html', this)">国家</button>
+    <button onclick="showContent('图书馆.html', this)">图书馆</button>
+    <button onclick="showContent('城市公交系统.html', this)">城市公交系统</button>
+    <button onclick="showContent('城市轨道交通.html', this)">城市轨道交通</button>
+    <button onclick="showContent('学校.html', this)">学校</button>
+    <button onclick="showContent('山脉.html', this)">山脉</button>
+    <button onclick="showContent('岛屿湖泊.html', this)">岛屿湖泊</button>
+    <button onclick="showContent('景观景点.html', this)">景观景点</button>
+    <button onclick="showContent('桥梁.html', this)">桥梁</button>
+    <button onclick="showContent('森林公园.html', this)">森林公园</button>
+    <button onclick="showContent('楼盘.html', this)">楼盘</button>
+    <button onclick="showContent('民用机场.html', this)">民用机场</button>
+    <button onclick="showContent('汽车.html', this)">汽车</button>
+    <button onclick="showContent('河流.html', this)">河流</button>
+    <button onclick="showContent('港口口岸.html', this)">港口口岸</button>
+    <button onclick="showContent('火车站.html', this)">火车站</button>
+    <button onclick="showContent('现代建筑.html', this)">现代建筑</button>
+    <button onclick="showContent('自然保护区.html', this)">自然保护区</button>
+    <button onclick="showContent('营业场所.html', this)">营业场所</button>
+    <button onclick="showContent('行政区划.html', this)">行政区划</button>
+    <button onclick="showContent('街区路.html', this)">街区路</button>
+    <button onclick="showContent('铁路线路.html', this)">铁路线路</button>
+    <button onclick="showContent('隧道.html', this)">隧道</button>
+    <!-- Add more buttons as needed -->
+</div>
+<div id="content">
+    <iframe id="iframeContent" src=""></iframe>
+    <div id="defaultMessage">请点击左侧的相关类别以查看图谱详细信息</div>
+</div>
+
+<script>
+    function showContent(page, element) {
+        var iframe = document.getElementById('iframeContent');
+        var defaultMessage = document.getElementById('defaultMessage');
+        iframe.src = page;
+        iframe.style.display = 'block';
+        defaultMessage.style.display = 'none';
+
+        // 移除所有按钮的选中状态
+        var buttons = document.querySelectorAll('#sidebar button');
+        buttons.forEach(function(button) {
+            button.classList.remove('selected');
+        });
+
+        // 为当前点击的按钮添加选中状态
+        element.classList.add('selected');
+    }
+</script>
+</body>
+</html>

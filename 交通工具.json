@@ -1,0 +1,695 @@
+{
+  "categories":{
+    "Category":"Category"
+  },
+  "data":{
+    "nodes":[
+      {
+        "label":"交通工具",
+        "value":9,
+        "id":10,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '交通工具', 'name': '交通工具'}"
+      },
+      {
+        "label":"凤尾船",
+        "value":9,
+        "id":11,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '凤尾船', 'name': '凤尾船'}"
+      },
+      {
+        "label":"MG7 2009款 1.8T MT 舒适版",
+        "value":9,
+        "id":12,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'MG7 2009款 1.8T MT 舒适版', 'name': 'MG7 2009款 1.8T MT 舒适版'}"
+      },
+      {
+        "label":"2011款蒙迪欧致胜GTDi240 2.0T豪华运动导航版",
+        "value":9,
+        "id":15,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2011款蒙迪欧致胜GTDi240 2.0T豪华运动导航版', 'name': '2011款蒙迪欧致胜GTDi240 2.0T豪华运动导航版'}"
+      },
+      {
+        "label":"2012款福特野马Boss 302手动赛道版",
+        "value":9,
+        "id":16,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款福特野马Boss 302手动赛道版', 'name': '2012款福特野马Boss 302手动赛道版'}"
+      },
+      {
+        "label":"2012款越铃 2.8T 基本型",
+        "value":9,
+        "id":14,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款越铃 2.8T 基本型', 'name': '2012款越铃 2.8T 基本型'}"
+      },
+      {
+        "label":"紧凑型轿车",
+        "value":9,
+        "id":7222,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '紧凑型轿车', 'name': '紧凑型轿车'}"
+      },
+      {
+        "label":"电动车观光车",
+        "value":9,
+        "id":10846,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '电动车观光车', 'name': '电动车观光车'}"
+      },
+      {
+        "label":"C2027",
+        "value":9,
+        "id":10391,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'C2027', 'name': 'C2027'}"
+      },
+      {
+        "label":"园林绿化车",
+        "value":9,
+        "id":3266,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '园林绿化车', 'name': '园林绿化车'}"
+      },
+      {
+        "label":"Mitsubishi Lancer Evolution VIII",
+        "value":9,
+        "id":11296,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'Mitsubishi Lancer Evolution VIII', 'name': 'Mitsubishi Lancer Evolution VIII'}"
+      },
+      {
+        "label":"南京地铁15号线",
+        "value":9,
+        "id":6413,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '南京地铁15号线', 'name': '南京地铁15号线'}"
+      },
+      {
+        "label":"EUCLID R-X 100",
+        "value":9,
+        "id":280,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'EUCLID R-X 100', 'name': 'EUCLID R-X 100'}"
+      },
+      {
+        "label":"德国BR42型蒸汽机车",
+        "value":9,
+        "id":2011,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '德国BR42型蒸汽机车', 'name': '德国BR42型蒸汽机车'}"
+      },
+      {
+        "label":"黄包车",
+        "value":9,
+        "id":2906,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '黄包车', 'name': '黄包车'}"
+      },
+      {
+        "label":"小松PC60-8挖掘机",
+        "value":9,
+        "id":4297,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '小松PC60-8挖掘机', 'name': '小松PC60-8挖掘机'}"
+      },
+      {
+        "label":"胶套轮机车",
+        "value":9,
+        "id":2466,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '胶套轮机车', 'name': '胶套轮机车'}"
+      },
+      {
+        "label":"义乌K32路",
+        "value":9,
+        "id":4770,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '义乌K32路', 'name': '义乌K32路'}"
+      },
+      {
+        "label":"新界区专线小巴301线",
+        "value":9,
+        "id":3921,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '新界区专线小巴301线', 'name': '新界区专线小巴301线'}"
+      },
+      {
+        "label":"站北路",
+        "value":9,
+        "id":5503,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '站北路', 'name': '站北路'}"
+      },
+      {
+        "label":"新加坡地铁 C151 电力动车组",
+        "value":9,
+        "id":8190,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '新加坡地铁 C151 电力动车组', 'name': '新加坡地铁 C151 电力动车组'}"
+      },
+      {
+        "label":"2012款帝豪EC7-RV 1.8L手动尊贵型",
+        "value":9,
+        "id":6149,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款帝豪EC7-RV 1.8L手动尊贵型', 'name': '2012款帝豪EC7-RV 1.8L手动尊贵型'}"
+      },
+      {
+        "label":"2012款帝豪EC7 1.8CVT自动尊贵型",
+        "value":9,
+        "id":9873,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款帝豪EC7 1.8CVT自动尊贵型', 'name': '2012款帝豪EC7 1.8CVT自动尊贵型'}"
+      },
+      {
+        "label":"2011款骏捷FSV新锐版1.5L手动基本型",
+        "value":9,
+        "id":7736,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2011款骏捷FSV新锐版1.5L手动基本型', 'name': '2011款骏捷FSV新锐版1.5L手动基本型'}"
+      },
+      {
+        "label":"K1163/6次列车",
+        "value":9,
+        "id":7110,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'K1163/6次列车', 'name': 'K1163/6次列车'}"
+      },
+      {
+        "label":"鲸工船",
+        "value":9,
+        "id":1078,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '鲸工船', 'name': '鲸工船'}"
+      },
+      {
+        "label":"江淮瑞鹰Ⅱ",
+        "value":9,
+        "id":10439,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '江淮瑞鹰Ⅱ', 'name': '江淮瑞鹰Ⅱ'}"
+      },
+      {
+        "label":"大众迈腾2012款改款 1.4TSI 舒适型",
+        "value":9,
+        "id":4495,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '大众迈腾2012款改款 1.4TSI 舒适型', 'name': '大众迈腾2012款改款 1.4TSI 舒适型'}"
+      },
+      {
+        "label":"2012款同悦CROSS 1.3L自动豪华型",
+        "value":9,
+        "id":2024,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款同悦CROSS 1.3L自动豪华型', 'name': '2012款同悦CROSS 1.3L自动豪华型'}"
+      },
+      {
+        "label":"2012款旗云2 1.5L手动标准型",
+        "value":9,
+        "id":5601,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款旗云2 1.5L手动标准型', 'name': '2012款旗云2 1.5L手动标准型'}"
+      },
+      {
+        "label":"奇瑞QQ3 1.0L 自动时尚版爱尚型 2012款",
+        "value":9,
+        "id":7812,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '奇瑞QQ3 1.0L 自动时尚版爱尚型 2012款', 'name': '奇瑞QQ3 1.0L 自动时尚版爱尚型 2012款'}"
+      },
+      {
+        "label":"2013款比亚迪S6 2.0L手动尊贵型",
+        "value":9,
+        "id":2431,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2013款比亚迪S6 2.0L手动尊贵型', 'name': '2013款比亚迪S6 2.0L手动尊贵型'}"
+      },
+      {
+        "label":"2013款凯迪拉克SRX 3.0L自动领先型",
+        "value":9,
+        "id":9573,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2013款凯迪拉克SRX 3.0L自动领先型', 'name': '2013款凯迪拉克SRX 3.0L自动领先型'}"
+      },
+      {
+        "label":"世纪钻石号游轮",
+        "value":9,
+        "id":3038,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '世纪钻石号游轮', 'name': '世纪钻石号游轮'}"
+      },
+      {
+        "label":"游丝信天翁号",
+        "value":9,
+        "id":9670,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '游丝信天翁号', 'name': '游丝信天翁号'}"
+      },
+      {
+        "label":"沃尔沃V30",
+        "value":9,
+        "id":10544,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '沃尔沃V30', 'name': '沃尔沃V30'}"
+      },
+      {
+        "label":"2012款宝骏630 1.8L手动精英型",
+        "value":9,
+        "id":6217,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款宝骏630 1.8L手动精英型', 'name': '2012款宝骏630 1.8L手动精英型'}"
+      },
+      {
+        "label":"2012款逸动 1.6L手动尊贵型",
+        "value":9,
+        "id":11242,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款逸动 1.6L手动尊贵型', 'name': '2012款逸动 1.6L手动尊贵型'}"
+      },
+      {
+        "label":"D5109次",
+        "value":9,
+        "id":9356,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'D5109次', 'name': 'D5109次'}"
+      },
+      {
+        "label":"D6119次",
+        "value":9,
+        "id":4132,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': 'D6119次', 'name': 'D6119次'}"
+      },
+      {
+        "label":"奥迪A8L美规版",
+        "value":9,
+        "id":11461,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '奥迪A8L美规版', 'name': '奥迪A8L美规版'}"
+      },
+      {
+        "label":"大功率交流传动六轴货运电力机车",
+        "value":9,
+        "id":6165,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '大功率交流传动六轴货运电力机车', 'name': '大功率交流传动六轴货运电力机车'}"
+      },
+      {
+        "label":"迈腾1.4TSI DSG",
+        "value":9,
+        "id":10999,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '迈腾1.4TSI DSG', 'name': '迈腾1.4TSI DSG'}"
+      },
+      {
+        "label":"2012款帝豪EC7 1.8CVT自动舒适型",
+        "value":9,
+        "id":5777,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款帝豪EC7 1.8CVT自动舒适型', 'name': '2012款帝豪EC7 1.8CVT自动舒适型'}"
+      },
+      {
+        "label":"2011款骏捷FSV新锐版1.5L自动舒适型",
+        "value":9,
+        "id":4435,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2011款骏捷FSV新锐版1.5L自动舒适型', 'name': '2011款骏捷FSV新锐版1.5L自动舒适型'}"
+      },
+      {
+        "label":"2012款新远景1.5 DVVT豪华型",
+        "value":9,
+        "id":3109,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '2012款新远景1.5 DVVT豪华型', 'name': '2012款新远景1.5 DVVT豪华型'}"
+      }
+    ],
+    "edges":[
+      {
+        "id":8,
+        "label":"凤尾船是一种交通工具",
+        "from":10,
+        "to":11
+      },
+      {
+        "id":9,
+        "label":"MG7 2009款 1.8T MT 舒适版是一种交通工具",
+        "from":10,
+        "to":12
+      },
+      {
+        "id":10,
+        "label":"2011款蒙迪欧致胜GTDi240 2.0T豪华运动导航版是一个交通工具",
+        "from":10,
+        "to":15
+      },
+      {
+        "id":11,
+        "label":"2012款福特野马Boss 302手动赛道版是一个交通工具",
+        "from":10,
+        "to":16
+      },
+      {
+        "id":12,
+        "label":"2012款越铃 2.8T 基本型是一种交通工具",
+        "from":10,
+        "to":14
+      },
+      {
+        "id":16,
+        "label":"紧凑型轿车是一种交通工具",
+        "from":10,
+        "to":7222
+      },
+      {
+        "id":17,
+        "label":"电动车观光车是一种交通工具",
+        "from":10,
+        "to":10846
+      },
+      {
+        "id":18,
+        "label":"C2027是一个交通工具",
+        "from":10,
+        "to":10391
+      },
+      {
+        "id":19,
+        "label":"园林绿化车是一种交通工具",
+        "from":10,
+        "to":3266
+      },
+      {
+        "id":20,
+        "label":"Mitsubishi Lancer Evolution VIII是一种交通工具",
+        "from":10,
+        "to":11296
+      },
+      {
+        "id":21,
+        "label":"南京地铁15号线是一个交通工具",
+        "from":10,
+        "to":6413
+      },
+      {
+        "id":22,
+        "label":"EUCLID R-X 100是一个交通工具",
+        "from":10,
+        "to":280
+      },
+      {
+        "id":23,
+        "label":"德国BR42型蒸汽机车是一种交通工具",
+        "from":10,
+        "to":2011
+      },
+      {
+        "id":24,
+        "label":"黄包车是一种交通工具",
+        "from":10,
+        "to":2906
+      },
+      {
+        "id":25,
+        "label":"小松PC60-8挖掘机是一种交通工具",
+        "from":10,
+        "to":4297
+      },
+      {
+        "id":26,
+        "label":"胶套轮机车是一种交通工具",
+        "from":10,
+        "to":2466
+      },
+      {
+        "id":27,
+        "label":"义乌K32路是一种交通工具",
+        "from":10,
+        "to":4770
+      },
+      {
+        "id":28,
+        "label":"新界区专线小巴301线是一个交通工具",
+        "from":10,
+        "to":3921
+      },
+      {
+        "id":29,
+        "label":"交通工具位于站北路",
+        "from":10,
+        "to":5503
+      },
+      {
+        "id":30,
+        "label":"新加坡地铁 C151 电力动车组是一种交通工具",
+        "from":10,
+        "to":8190
+      },
+      {
+        "id":31,
+        "label":"2012款帝豪EC7-RV 1.8L手动尊贵型是一个交通工具",
+        "from":10,
+        "to":6149
+      },
+      {
+        "id":32,
+        "label":"2012款帝豪EC7 1.8CVT自动尊贵型是一个交通工具",
+        "from":10,
+        "to":9873
+      },
+      {
+        "id":33,
+        "label":"2011款骏捷FSV新锐版1.5L手动基本型是一个交通工具",
+        "from":10,
+        "to":7736
+      },
+      {
+        "id":34,
+        "label":"K1163/6次列车是一种交通工具",
+        "from":10,
+        "to":7110
+      },
+      {
+        "id":35,
+        "label":"鲸工船是一种交通工具",
+        "from":10,
+        "to":1078
+      },
+      {
+        "id":36,
+        "label":"江淮瑞鹰Ⅱ是一种交通工具",
+        "from":10,
+        "to":10439
+      },
+      {
+        "id":37,
+        "label":"大众迈腾2012款改款 1.4TSI 舒适型是一种交通工具",
+        "from":10,
+        "to":4495
+      },
+      {
+        "id":38,
+        "label":"2012款同悦CROSS 1.3L自动豪华型是一个交通工具",
+        "from":10,
+        "to":2024
+      },
+      {
+        "id":39,
+        "label":"2012款旗云2 1.5L手动标准型是一个交通工具",
+        "from":10,
+        "to":5601
+      },
+      {
+        "id":40,
+        "label":"奇瑞QQ3 1.0L 自动时尚版爱尚型 2012款是一种交通工具",
+        "from":10,
+        "to":7812
+      },
+      {
+        "id":41,
+        "label":"2013款比亚迪S6 2.0L手动尊贵型是一个交通工具",
+        "from":10,
+        "to":2431
+      },
+      {
+        "id":42,
+        "label":"2013款凯迪拉克SRX 3.0L自动领先型是一种交通工具",
+        "from":10,
+        "to":9573
+      },
+      {
+        "id":43,
+        "label":"世纪钻石号游轮是一种交通工具",
+        "from":10,
+        "to":3038
+      },
+      {
+        "id":44,
+        "label":"游丝信天翁号是一个交通工具",
+        "from":10,
+        "to":9670
+      },
+      {
+        "id":45,
+        "label":"沃尔沃V30是一种交通工具",
+        "from":10,
+        "to":10544
+      },
+      {
+        "id":46,
+        "label":"2012款宝骏630 1.8L手动精英型是一种交通工具",
+        "from":10,
+        "to":6217
+      },
+      {
+        "id":47,
+        "label":"2012款逸动 1.6L手动尊贵型是一种交通工具",
+        "from":10,
+        "to":11242
+      },
+      {
+        "id":48,
+        "label":"D5109次是一个交通工具",
+        "from":10,
+        "to":9356
+      },
+      {
+        "id":49,
+        "label":"D6119次是一个交通工具",
+        "from":10,
+        "to":4132
+      },
+      {
+        "id":50,
+        "label":"奥迪A8L美规版是一个交通工具",
+        "from":10,
+        "to":11461
+      },
+      {
+        "id":51,
+        "label":"大功率交流传动六轴货运电力机车是一种交通工具",
+        "from":10,
+        "to":6165
+      },
+      {
+        "id":52,
+        "label":"迈腾1.4TSI DSG是一个交通工具",
+        "from":10,
+        "to":10999
+      },
+      {
+        "id":53,
+        "label":"2012款帝豪EC7 1.8CVT自动舒适型是一个交通工具",
+        "from":10,
+        "to":5777
+      },
+      {
+        "id":54,
+        "label":"2011款骏捷FSV新锐版1.5L自动舒适型是一个交通工具",
+        "from":10,
+        "to":4435
+      },
+      {
+        "id":55,
+        "label":"2012款新远景1.5 DVVT豪华型是一个交通工具",
+        "from":10,
+        "to":3109
+      }
+    ]
+  }
+}

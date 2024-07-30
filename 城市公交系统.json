@@ -1,0 +1,65 @@
+{
+  "categories":{
+    "Category":"Category"
+  },
+  "data":{
+    "nodes":[
+      {
+        "label":"城市公交系统",
+        "value":7,
+        "id":8689,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '城市公交系统', 'name': '城市公交系统'}"
+      },
+      {
+        "label":"夏湾总站",
+        "value":7,
+        "id":2897,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '夏湾总站', 'name': '夏湾总站'}"
+      },
+      {
+        "label":"海口汽车站",
+        "value":7,
+        "id":9894,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '海口汽车站', 'name': '海口汽车站'}"
+      },
+      {
+        "label":"襄阳公交9路",
+        "value":7,
+        "id":2378,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '襄阳公交9路', 'name': '襄阳公交9路'}"
+      }
+    ],
+    "edges":[
+      {
+        "id":376,
+        "label":"夏湾总站是城市公交系统的一部分",
+        "from":8689,
+        "to":2897
+      },
+      {
+        "id":377,
+        "label":"海口汽车站是城市公交系统的一部分",
+        "from":8689,
+        "to":9894
+      },
+      {
+        "id":378,
+        "label":"襄阳公交9路是一个城市公交系统",
+        "from":8689,
+        "to":2378
+      }
+    ]
+  }
+}
