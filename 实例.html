@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>交通工具 知识图谱</title>
+    <title>实例 知识图谱</title>
     <script type="text/javascript" src="./lib/interactive-graph-0.1.0/interactive-graph.min.js"></script>
     <link type="text/css" rel="stylesheet" href="./lib/interactive-graph-0.1.0/interactive-graph.min.css">
     <script src="./lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
@@ -29,7 +29,7 @@
 <script type="text/javascript">
     igraph.i18n.setLanguage("chs");
     var app = new igraph.GraphNavigator(document.getElementById('graphArea'), 'LIGHT');
-    app.loadGson("交通工具1.json", {
+    app.loadGson("实例.json", {
         "onGetNodeDescription": function (node) {
             console.log(node);
             var description = "<p align=center>";

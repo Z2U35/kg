@@ -17,11 +17,20 @@
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
             overflow-y: auto;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
-        #sidebar button {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+        #menu {
+            display: flex;
+            flex-direction: row;
+        }
+        .menu-item {
+            position: relative;
+            margin-right: 10px;
+        }
+        .menu-item > button {
+            padding: 10px 20px;
             cursor: pointer;
             border: none;
             background-color: #007bff;
@@ -29,12 +38,35 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
-        #sidebar button:hover {
+        .menu-item > button:hover {
             background-color: #0056b3;
         }
-        #sidebar button.selected {
-            background-color: #0056b3;
+        .menu-item > .submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #f4f4f4;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            z-index: 1;
+            width: 100%;
+        }
+        .submenu button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
             color: white;
+            text-align: left;
+            border-radius: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+        .submenu button:hover {
+            background-color: #0056b3;
+        }
+        .menu-item:hover > .submenu {
+            display: block;
         }
         #content {
             flex-grow: 1;
@@ -58,39 +90,34 @@
 </head>
 <body>
 <div id="sidebar">
-    <button onclick="showContent('交通工具.html', this)">交通工具</button>
-    <button onclick="showContent('体育设施.html', this)">体育设施</button>
-    <button onclick="showContent('其他地理.html', this)">其他地理</button>
-    <button onclick="showContent('医院.html', this)">医院</button>
-    <button onclick="showContent('历史遗址.html', this)">历史遗址</button>
-    <button onclick="showContent('国家.html', this)">国家</button>
-    <button onclick="showContent('图书馆.html', this)">图书馆</button>
-    <button onclick="showContent('城市公交系统.html', this)">城市公交系统</button>
-    <button onclick="showContent('城市轨道交通.html', this)">城市轨道交通</button>
-    <button onclick="showContent('学校.html', this)">学校</button>
-    <button onclick="showContent('山脉.html', this)">山脉</button>
-    <button onclick="showContent('岛屿湖泊.html', this)">岛屿湖泊</button>
-    <button onclick="showContent('景观景点.html', this)">景观景点</button>
-    <button onclick="showContent('桥梁.html', this)">桥梁</button>
-    <button onclick="showContent('森林公园.html', this)">森林公园</button>
-    <button onclick="showContent('楼盘.html', this)">楼盘</button>
-    <button onclick="showContent('民用机场.html', this)">民用机场</button>
-    <button onclick="showContent('汽车.html', this)">汽车</button>
-    <button onclick="showContent('河流.html', this)">河流</button>
-    <button onclick="showContent('港口口岸.html', this)">港口口岸</button>
-    <button onclick="showContent('火车站.html', this)">火车站</button>
-    <button onclick="showContent('现代建筑.html', this)">现代建筑</button>
-    <button onclick="showContent('自然保护区.html', this)">自然保护区</button>
-    <button onclick="showContent('营业场所.html', this)">营业场所</button>
-    <button onclick="showContent('行政区划.html', this)">行政区划</button>
-    <button onclick="showContent('街区路.html', this)">街区路</button>
-    <button onclick="showContent('铁路线路.html', this)">铁路线路</button>
-    <button onclick="showContent('隧道.html', this)">隧道</button>
-    <!-- Add more buttons as needed -->
+    <div id="menu">
+        <div class="menu-item">
+            <button>图谱</button>
+            <div class="submenu">
+                <button onclick="showContent('上下位.html', this)">上下位</button>
+                <button onclick="showContent('产出.html', this)">产出</button>
+                <button onclick="showContent('先后.html', this)">先后</button>
+                <button onclick="showContent('关联.html', this)">关联</button>
+                <button onclick="showContent('因果.html', this)">因果</button>
+                <button onclick="showContent('实例.html', this)">实例</button>
+                <button onclick="showContent('方式.html', this)">方式</button>
+                <button onclick="showContent('相似.html', this)">相似</button>
+                <button onclick="showContent('组成.html', this)">组成</button>
+                <button onclick="showContent('输入.html', this)">输入</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button>对比效果</button>
+            <div class="submenu">
+                <button onclick="showContent('segmentation.html', this)">分割</button>
+                <button onclick="showContent('detection.html', this)">检测</button>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="content">
     <iframe id="iframeContent" src=""></iframe>
-    <div id="defaultMessage">请点击左侧的相关类别以查看图谱详细信息</div>
+    <div id="defaultMessage">图谱展示</div>
 </div>
 
 <script>
