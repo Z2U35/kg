@@ -13,9 +13,16 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
-        img {
-            max-width: 80%;
-            max-height: 80%;
+        .image-container {
+            display: flex;
+            gap: 20px; /* 图片之间的间距 */
+            flex-wrap: wrap; /* 允许换行 */
+            justify-content: center; /* 水平居中对齐 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+        .image-container img {
+            max-width: 30%;
+            max-height: 30%;
             border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -23,7 +30,13 @@
     </style>
 </head>
 <body>
-<!-- 替换src属性中的图片路径为你想展示的图片 -->
-<img src="images/photo/fenge.png" alt="分割效果图片">
+<div class="image-container">
+    <img src="images/photo/Segmentation.png" alt="分割效果">
+    <img src="images/photo/result1.png" alt="分割结果1">
+    <img src="images/photo/result2.png" alt="分割结果2">
+    <img src="images/photo/result3.png" alt="分割结果3">
+    <img src="images/photo/result4.png" alt="分割结果4">
+    <img src="images/photo/result5.png" alt="分割结果5">
+</div>
 </body>
 </html>
