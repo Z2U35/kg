@@ -1,0 +1,137 @@
+{
+  "categories":{
+    "Category":"Category"
+  },
+  "data":{
+    "nodes":[
+      {
+        "label":"园林绿化车",
+        "value":6,
+        "id":3266,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '园林绿化车', 'name': '园林绿化车'}"
+      },
+      {
+        "label":"甲玛沟",
+        "value":6,
+        "id":2090,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '甲玛沟', 'name': '甲玛沟'}"
+      },
+      {
+        "label":"郑大工学院社区",
+        "value":6,
+        "id":4982,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '郑大工学院社区', 'name': '郑大工学院社区'}"
+      },
+      {
+        "label":"千里相会",
+        "value":6,
+        "id":5900,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '千里相会', 'name': '千里相会'}"
+      },
+      {
+        "label":"多利卡扫路洒水两用车",
+        "value":6,
+        "id":10204,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '多利卡扫路洒水两用车', 'name': '多利卡扫路洒水两用车'}"
+      },
+      {
+        "label":"梦幻大峡谷",
+        "value":6,
+        "id":7948,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '梦幻大峡谷', 'name': '梦幻大峡谷'}"
+      },
+      {
+        "label":"电动车观光车",
+        "value":6,
+        "id":10846,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '电动车观光车', 'name': '电动车观光车'}"
+      },
+      {
+        "label":"交通工具",
+        "value":6,
+        "id":10,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '交通工具', 'name': '交通工具'}"
+      },
+      {
+        "label":"桥梁",
+        "value":6,
+        "id":10376,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '桥梁', 'name': '桥梁'}"
+      },
+      {
+        "label":"铁路线路",
+        "value":6,
+        "id":3366,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '铁路线路', 'name': '铁路线路'}"
+      }
+    ],
+    "edges":[
+      {
+        "id":10765,
+        "label":"甲玛沟是实现园林绿化车的方式方法",
+        "from":3266,
+        "to":2090
+      },
+      {
+        "id":10767,
+        "label":"郑大工学院社区是实现园林绿化车的方式方法",
+        "from":3266,
+        "to":4982
+      },
+      {
+        "id":32335,
+        "label":"多利卡扫路洒水两用车是实现千里相会的方式方法",
+        "from":5900,
+        "to":10204
+      },
+      {
+        "id":37763,
+        "label":"电动车观光车是实现梦幻大峡谷的方式方法",
+        "from":7948,
+        "to":10846
+      },
+      {
+        "id":52056,
+        "label":"借由桥梁可以实现交通工具",
+        "from":10,
+        "to":10376
+      },
+      {
+        "id":52062,
+        "label":"借由铁路线路可以实现交通工具",
+        "from":10,
+        "to":3366
+      }
+    ]
+  }
+}

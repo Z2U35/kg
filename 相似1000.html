@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>因果 知识图谱</title>
+    <title>相似 知识图谱</title>
     <script type="text/javascript" src="./lib/interactive-graph-0.1.0/interactive-graph.min.js"></script>
     <link type="text/css" rel="stylesheet" href="./lib/interactive-graph-0.1.0/interactive-graph.min.css">
     <script src="./lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
@@ -105,7 +105,7 @@
 <script type="text/javascript">
     igraph.i18n.setLanguage("chs");
     var app = new igraph.GraphNavigator(document.getElementById('graphArea'), 'LIGHT');
-    app.loadGson("因果.json", {
+    app.loadGson("相似1000.json", {
         "onGetNodeDescription": function (node) {
             var description = "<p align=center>";
             if (node.image !== undefined) {
@@ -132,21 +132,21 @@
         switch(count) {
             case '500':
                 document.getElementById('button500').classList.add('selected');
-                window.location.href = '因果500.html';
+                window.location.href = '相似500.html';
                 break;
             case '1000':
                 document.getElementById('button1000').classList.add('selected');
-                window.location.href = '因果1000.html';
+                window.location.href = '相似1000.html';
                 break;
             case 'all':
                 document.getElementById('buttonAll').classList.add('selected');
-                window.location.href = '因果.html';
+                window.location.href = '相似.html';
                 break;
         }
     }
 
     // 高亮当前选择的按钮
-    document.getElementById('buttonAll').classList.add('selected');
+    document.getElementById('button1000').classList.add('selected');
 </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
         }
         #menu {
             display: flex;
-            flex-direction: row;
+            flex-direction: row; /* 确保按钮在同一行显示 */
         }
         .menu-item {
             position: relative;
@@ -37,8 +37,9 @@
             color: white;
             border-radius: 4px;
             transition: background-color 0.3s;
+            text-align: left;
         }
-        .menu-item > button:hover {
+        .menu-item > button:hover, .menu-item > button.selected {
             background-color: #0056b3;
         }
         .menu-item > .submenu {
@@ -80,7 +81,7 @@
             width: 100%;
             height: 100%;
             border: none;
-            display: none;
+            display: block;
         }
         #defaultMessage {
             font-size: 24px;
@@ -92,22 +93,22 @@
 <div id="sidebar">
     <div id="menu">
         <div class="menu-item">
-            <button>图谱</button>
+            <button onclick="showContent('上下位500.html', this)">图谱</button>
             <div class="submenu">
-                <button onclick="showContent('上下位.html', this)">上下位</button>
-                <button onclick="showContent('产出.html', this)">产出</button>
-                <button onclick="showContent('先后.html', this)">先后</button>
-                <button onclick="showContent('关联.html', this)">关联</button>
-                <button onclick="showContent('因果.html', this)">因果</button>
-                <button onclick="showContent('实例.html', this)">实例</button>
-                <button onclick="showContent('方式.html', this)">方式</button>
-                <button onclick="showContent('相似.html', this)">相似</button>
-                <button onclick="showContent('组成.html', this)">组成</button>
-                <button onclick="showContent('输入.html', this)">输入</button>
+                <button onclick="showContent('上下位500.html', this)">上下位</button>
+                <button onclick="showContent('产出500.html', this)">产出</button>
+                <button onclick="showContent('先后500.html', this)">先后</button>
+                <button onclick="showContent('关联500.html', this)">关联</button>
+                <button onclick="showContent('因果500.html', this)">因果</button>
+                <button onclick="showContent('实例500.html', this)">实例</button>
+                <button onclick="showContent('方式500.html', this)">方式</button>
+                <button onclick="showContent('相似500.html', this)">相似</button>
+                <button onclick="showContent('组成500.html', this)">组成</button>
+                <button onclick="showContent('输入500.html', this)">输入</button>
             </div>
         </div>
         <div class="menu-item">
-            <button>对比效果</button>
+            <button onclick="showContent('segmentation.html', this)">对比效果</button>
             <div class="submenu">
                 <button onclick="showContent('segmentation.html', this)">分割</button>
                 <button onclick="showContent('detection.html', this)">检测</button>
@@ -116,26 +117,30 @@
     </div>
 </div>
 <div id="content">
-    <iframe id="iframeContent" src=""></iframe>
-    <div id="defaultMessage">图谱展示</div>
+    <iframe id="iframeContent" src="上下位500.html"></iframe>
 </div>
 
 <script>
     function showContent(page, element) {
         var iframe = document.getElementById('iframeContent');
-        var defaultMessage = document.getElementById('defaultMessage');
         iframe.src = page;
-        iframe.style.display = 'block';
-        defaultMessage.style.display = 'none';
 
-        // 移除所有按钮的选中状态
-        var buttons = document.querySelectorAll('#sidebar button');
+        // 更新主按钮的高亮状态
+        var buttons = document.querySelectorAll('#menu > .menu-item > button');
         buttons.forEach(function(button) {
             button.classList.remove('selected');
         });
-
-        // 为当前点击的按钮添加选中状态
         element.classList.add('selected');
+
+        // 在iframe内容加载后处理子菜单中的按钮高亮状态
+        iframe.onload = function() {
+            var doc = iframe.contentWindow.document;
+            var selectedButton = doc.querySelector('button.selected');
+            if (selectedButton) selectedButton.classList.remove('selected');
+
+            var targetButton = doc.querySelector('button[value="' + page.split('.')[0] + '"]');
+            if (targetButton) targetButton.classList.add('selected');
+        };
     }
 </script>
 </body>
