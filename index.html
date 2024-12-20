@@ -115,12 +115,39 @@
             </div>
         </div>
     </div>
+    <div style="margin-top: 20px;">
+        <text>可能还对如下内容感兴趣：</text>
+    </div>
+    <div id="listContainer"></div>
 </div>
 <div id="content">
     <iframe id="iframeContent" src="pages/上下位500.html"></iframe>
 </div>
 
 <script>
+    function loadNeighbours() {
+        const listContainer = document.getElementById("listContainer");
+        const nodesData = JSON.parse(localStorage.getItem("nodesData"));
+
+        // 清空 listContainer 的内容
+        listContainer.innerHTML = "";
+
+        const ul = document.createElement("ul");
+
+        if (nodesData && nodesData.length > 0) {
+            // 只取前 15 条数据
+            nodesData.slice(0, 15).forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item.label; // 设置 <li> 的文本为 label 值
+                ul.appendChild(li); // 将 <li> 添加到 <ul>
+            });
+            listContainer.appendChild(ul);
+        } else {
+            console.log("No nodes data found in localStorage");
+        }
+    }
+    const intervalId = setInterval(loadNeighbours, 2000);
+
     function showContent(page, element) {
         var iframe = document.getElementById('iframeContent');
         iframe.src = page;
