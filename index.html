@@ -87,6 +87,36 @@
             font-size: 24px;
             color: #555;
         }
+        #interestContainer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #interestContainer text {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        #listContainer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #listContainer ul li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        #listContainer ul li:hover {
+            background-color: #d6d6d6;
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body>
@@ -115,10 +145,10 @@
             </div>
         </div>
     </div>
-    <div style="margin-top: 20px;">
+    <div id="interestContainer">
         <text>可能还对如下内容感兴趣：</text>
+        <div id="listContainer"></div>
     </div>
-    <div id="listContainer"></div>
 </div>
 <div id="content">
     <iframe id="iframeContent" src="pages/上下位500.html"></iframe>
