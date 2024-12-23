@@ -87,6 +87,16 @@
             font-size: 24px;
             color: #555;
         }
+        #updateTime {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: green;
+            text-align: left;
+        }
         #interestContainer {
             margin-top: 20px;
             padding: 15px;
@@ -125,6 +135,7 @@
 </head>
 <body>
 <div id="sidebar">
+    <div id="updateTime">知识图谱已更新：2024年12月22日</div>
     <div id="menu">
         <div class="menu-item">
             <button onclick="showContent('pages/上下位500.html', this)">图谱</button>
@@ -180,7 +191,6 @@
             console.log("No nodes data found in localStorage");
         }
     }
-    const intervalId = setInterval(loadNeighbours, 2000);
 
     function showContent(page, element) {
         var iframe = document.getElementById('iframeContent');
@@ -203,6 +213,9 @@
             if (targetButton) targetButton.classList.add('selected');
         };
     }
+
+    // 定时调用 loadNeighbours
+    const intervalId = setInterval(loadNeighbours, 2000);
 </script>
 </body>
 </html>
