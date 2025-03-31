@@ -7,36 +7,47 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            overflow: auto; /* 允许页面滚动 */
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 定义2列布局 */
+            grid-template-rows: auto; /* 自动行高 */
+            gap: 20px; /* 图片之间的间距 */
+            padding: 20px; /* 添加内边距 */
+        }
+        .image-wrapper {
+            width: 1000px; /* 固定宽度 */
+            height: 500px; /* 固定高度 */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .image-container {
-            display: flex;
-            gap: 20px; /* 图片之间的间距 */
-            flex-wrap: wrap; /* 允许换行 */
-            justify-content: center; /* 水平居中对齐 */
-            align-items: center; /* 垂直居中对齐 */
-        }
-        .image-container img {
-            max-width: 30%;
-            max-height: 30%;
+            background-color: #fff; /* 背景色 */
             border: 2px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
 <body>
 <div class="image-container">
-    <img src="images/photo/Segmentation.png" alt="分割效果">
-    <img src="images/photo/result1.png" alt="分割结果1">
-    <img src="images/photo/result2.png" alt="分割结果2">
-    <img src="images/photo/result3.png" alt="分割结果3">
-    <img src="images/photo/result4.png" alt="分割结果4">
-    <img src="images/photo/result5.png" alt="分割结果5">
+    <div class="image-wrapper">
+        <img src="images/photo/fengejingdu.png" alt="分割效果">
+    </div>
+    <div class="image-wrapper">
+        <img src="images/photo/newresult1.png" alt="分割结果1">
+    </div>
+    <div class="image-wrapper">
+        <img src="images/photo/newresult2.png" alt="分割结果2">
+    </div>
+    <div class="image-wrapper">
+        <img src="images/photo/newresult3.png" alt="分割结果3">
+    </div>
 </div>
 </body>
 </html>

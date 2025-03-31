@@ -5,6 +5,177 @@
   "data":{
     "nodes":[
       {
+        "label":"不透水表面",
+        "value":9,
+        "id":53001,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '不透水表面', 'label': '不透水表面'}"
+      },
+      {
+        "label":"汽车",
+        "value":9,
+        "id":53002,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '汽车', 'label': '汽车'}"
+      },
+      {
+        "label":"船",
+        "value":9,
+        "id":53003,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '船', 'label': '船'}"
+      },
+      {
+        "label":"港口",
+        "value":9,
+        "id":53004,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '港口', 'label': '港口'}"
+      },
+      {
+        "label":"桥梁",
+        "value":9,
+        "id":53005,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '桥梁', 'label': '桥梁'}"
+      },
+      {
+        "label":"道路",
+        "value":9,
+        "id":53006,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '道路', 'label': '道路'}"
+      },
+      {
+        "label":"储罐",
+        "value":9,
+        "id":53007,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '储罐', 'label': '储罐'}"
+      },
+      {
+        "label":"建筑",
+        "value":9,
+        "id":53008,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '建筑', 'label': '建筑'}"
+      },
+      {
+        "label":"人行道",
+        "value":9,
+        "id":53009,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '人行道', 'label': '人行道'}"
+      },
+      {
+        "label":"墙",
+        "value":9,
+        "id":53010,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '墙', 'label': '墙'}"
+      },
+      {
+        "label":"树木",
+        "value":9,
+        "id":53011,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '树木', 'label': '树木'}"
+      },
+      {
+        "label":"水",
+        "value":9,
+        "id":53012,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '水', 'label': '水'}"
+      },
+      {
+        "label":"低植被覆盖",
+        "value":9,
+        "id":53013,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '低植被覆盖', 'label': '低植被覆盖'}"
+      },
+      {
+        "label":"游泳池",
+        "value":9,
+        "id":53014,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '游泳池', 'label': '游泳池'}"
+      },
+      {
+        "label":"直升机",
+        "value":9,
+        "id":53015,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '直升机', 'label': '直升机'}"
+      },
+      {
+        "label":"飞机",
+        "value":9,
+        "id":53016,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '飞机', 'label': '飞机'}"
+      },
+      {
+        "label":"天空",
+        "value":9,
+        "id":53017,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '天空', 'label': '天空'}"
+      },
+      {
+        "label":"环岛",
+        "value":9,
+        "id":53018,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '环岛', 'label': '环岛'}"
+      },
+      {
+        "label":"运动场",
+        "value":9,
+        "id":53019,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '运动场', 'label': '运动场'}"
+      },
+      {
         "label":"交通工具",
         "value":10,
         "id":10,
@@ -103496,6 +103667,144 @@
         "label":"城市公交系统与现代建筑有关联",
         "from":8689,
         "to":289
+      },
+      {
+        "id":0,
+        "label":"汽车与不透水表面有关联",
+        "from":53001,
+        "to":53002
+      },
+      {
+        "id":1,
+        "label":"港口中包含船",
+        "from":53003,
+        "to":53004
+      },
+      {
+        "id":2,
+        "label":"道路与桥梁相连",
+        "from":53005,
+        "to":53006
+      },
+      {
+        "id":3,
+        "label":"储罐位于道路",
+        "from":53006,
+        "to":53007
+      },
+      {
+        "id":4,
+        "label":"不透水表面和道路相邻",
+        "from":53006,
+        "to":53001
+      },
+      {
+        "id":5,
+        "label":"建筑和道路相邻",
+        "from":53006,
+        "to":53008
+      },
+      {
+        "id":6,
+        "label":"建筑距离人行道近",
+        "from":53009,
+        "to":53008
+      },
+      {
+        "id":7,
+        "label":"墙是建筑的一部分",
+        "from":53010,
+        "to":53008
+      },
+      {
+        "id":8,
+        "label":"树木距离墙近",
+        "from":53010,
+        "to":53011
+      },
+      {
+        "id":9,
+        "label":"树木与道路有关联",
+        "from":53006,
+        "to":53011
+      },
+      {
+        "id":10,
+        "label":"树木的生存基于水",
+        "from":53012,
+        "to":53011
+      },
+      {
+        "id":11,
+        "label":"低植被覆盖的生存基于水",
+        "from":53012,
+        "to":53013
+      },
+      {
+        "id":12,
+        "label":"低植被覆盖与树木有关联",
+        "from":53011,
+        "to":53013
+      },
+      {
+        "id":13,
+        "label":"游泳池由水构成",
+        "from":53012,
+        "to":53014
+      },
+      {
+        "id":14,
+        "label":"不透水表面与建筑有关联",
+        "from":53008,
+        "to":53001
+      },
+      {
+        "id":15,
+        "label":"直升机与不透水表面有关联",
+        "from":53001,
+        "to":53015
+      },
+      {
+        "id":16,
+        "label":"直升机与飞机有关联",
+        "from":53016,
+        "to":53015
+      },
+      {
+        "id":17,
+        "label":"天空与飞机有关联",
+        "from":53016,
+        "to":53017
+      },
+      {
+        "id":18,
+        "label":"天空与直升机有关联",
+        "from":53015,
+        "to":53017
+      },
+      {
+        "id":50,
+        "label":"汽车与港口有关联",
+        "from":53004,
+        "to":53002
+      },
+      {
+        "id":51,
+        "label":"汽车与环岛有关联",
+        "from":53018,
+        "to":53002
+      },
+      {
+        "id":52,
+        "label":"汽车与运动场有关联",
+        "from":53019,
+        "to":53002
+      },
+      {
+        "id":53,
+        "label":"汽车与桥梁有关联",
+        "from":53005,
+        "to":53002
       }
     ]
   }
