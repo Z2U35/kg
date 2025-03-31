@@ -1,0 +1,504 @@
+{
+  "categories":{
+    "Category":"Category"
+  },
+  "data": {
+    "nodes": [
+      {
+        "label": "交通工具",
+        "value": 15,
+        "id": 10,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '交通工具', 'name': '交通工具'}"
+      },
+      {
+        "label": "水体",
+        "value": 15,
+        "id": 20,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '水体', 'name': '水体'}"
+      },
+      {
+        "label": "农田",
+        "value": 15,
+        "id": 30,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '农田', 'name': '农田'}"
+      },
+      {
+        "label": "森林",
+        "value": 15,
+        "id": 40,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '森林', 'name': '森林'}"
+      },
+      {
+        "label": "船舶",
+        "value": 15,
+        "id": 50,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '船舶', 'name': '船舶'}"
+      },
+      {
+        "label": "湿地",
+        "value": 15,
+        "id": 60,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '湿地', 'name': '湿地'}"
+      },
+      {
+        "label": "飞机",
+        "value": 15,
+        "id":11,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '飞机', 'name': '飞机'}"
+      },
+      {
+        "label": "直升机",
+        "value": 15,
+        "id":12,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '直升机', 'name': '直升机'}"
+      },
+      {
+        "label": "汽车",
+        "value": 15,
+        "id":13,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '汽车', 'name': '汽车"
+      },
+
+      {
+        "label": "湖泊",
+        "value": 15,
+        "id":21,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '湖泊', 'name': '湖泊'}"
+      },
+      {
+        "label": "河流",
+        "value": 15,
+        "id":22,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '河流', 'name': '河流'}"
+      },
+      {
+        "label": "水库",
+        "value": 15,
+        "id":23,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '水库', 'name': '水库'}"
+      },
+      {
+        "label": "人工水体",
+        "value": 15,
+        "id":24,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '人工水体', 'name': '人工水体'}"
+      },
+      {
+        "label": "冰川",
+        "value": 15,
+        "id":25,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '冰川', 'name': '冰川'}"
+      },
+      {
+        "label": "海洋",
+        "value": 15,
+        "id":26,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '海洋', 'name': '海洋'}"
+      },
+
+
+
+      {
+        "label": "水稻田",
+        "value": 15,
+        "id":31,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '水稻田', 'name': '水稻田'}"
+      },
+      {
+        "label": "小麦田",
+        "value": 15,
+        "id":32,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '小麦田', 'name': '小麦田'}"
+      },
+      {
+        "label": "玉米田",
+        "value": 15,
+        "id":33,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '玉米田', 'name': '玉米田'}"
+      },
+      {
+        "label": "果园",
+        "value": 15,
+        "id":34,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '果园', 'name': '果园'}"
+      },
+      {
+        "label": "蔬菜大棚",
+        "value": 15,
+        "id":35,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '蔬菜大棚', 'name': '蔬菜大棚'}"
+      },
+
+
+
+
+      {
+        "label": "针叶林",
+        "value": 15,
+        "id":41,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '针叶林', 'name': '针叶林'}"
+      },
+      {
+        "label": "阔叶林",
+        "value": 15,
+        "id":42,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '阔叶林', 'name': '阔叶林'}"
+      },
+      {
+        "label": "混交林",
+        "value": 15,
+        "id":43,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '混交林', 'name': '混交林'}"
+      },
+      {
+        "label": "热带雨林",
+        "value": 15,
+        "id":44,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '热带雨林', 'name': '热带雨林'}"
+      },
+      {
+        "label": "针阔混交林",
+        "value": 15,
+        "id":45,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '针阔混交林', 'name': '针阔混交林'}"
+      },
+      {
+        "label": "货船",
+        "value": 15,
+        "id":51,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '货船', 'name': '货船'}"
+      },
+      {
+        "label": "渔船",
+        "value": 15,
+        "id":52,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '渔船', 'name': '渔船'}"
+      },
+      {
+        "label": "游艇",
+        "value": 15,
+        "id":53,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '游艇', 'name': '游艇'}"
+      },
+      {
+        "label": "军舰",
+        "value": 15,
+        "id":54,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '军舰', 'name': '军舰'}"
+      },
+      {
+        "label": "客轮",
+        "value": 15,
+        "id":55,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '客轮', 'name': '客轮'}"
+      },
+      {
+        "label": "渡船",
+        "value": 15,
+        "id":56,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '渡船', 'name': '渡船'}"
+      },
+      {
+        "label": "沼泽",
+        "value": 15,
+        "id":61,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '沼泽', 'name': '沼泽'}"
+      },
+      {
+        "label": "内陆湿地",
+        "value": 15,
+        "id":62,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '内陆湿地', 'name': '内陆湿地'}"
+      },
+      {
+        "label": "红树林",
+        "value": 15,
+        "id":63,
+        "categories": [
+          "Category"
+        ],
+        "info": "{'name_en': '红树林', 'name': '红树林'}"
+      }
+    ],
+    "edges": [
+      {
+        "id": 1000,
+        "label": "飞机是一种交通工具",
+        "from": 10,
+        "to": 11
+      },
+      {
+        "id": 1001,
+        "label": "直升机是一种交通工具",
+        "from": 10,
+        "to": 12
+      },
+      {
+        "id": 1030,
+        "label": "汽车是一种交通工具",
+        "from": 10,
+        "to": 13
+      },
+
+
+      {
+        "id": 1002,
+        "label": "湖泊是一种水体",
+        "from": 20,
+        "to": 21
+      },
+      {
+        "id":1003,
+        "label": "河流是一种水体",
+        "from":20,
+        "to":22
+      },
+      {
+        "id":1004,
+        "label": "水库是一种水体",
+        "from":20,
+        "to":23
+      },
+      {
+        "id":1004,
+        "label": "人工水体是一种水体",
+        "from":20,
+        "to":24
+      },
+      {
+        "id":1005,
+        "label": "冰川是一种水体",
+        "from":20,
+        "to":25
+      },
+      {
+        "id":1006,
+        "label": "海洋是一种水体",
+        "from":20,
+        "to":26
+      },
+
+
+
+
+      {
+        "id":1007,
+        "label": "水稻田是一种农田",
+        "from":30,
+        "to":31
+      },
+      {
+        "id":1008,
+        "label": "小麦田是一种农田",
+        "from":30,
+        "to":32
+      },
+      {
+        "id":1009,
+        "label": "玉米田是一种农田",
+        "from":30,
+        "to":33
+      },
+      {
+        "id":1010,
+        "label": "果园一种农田",
+        "from":30,
+        "to":34
+      },
+      {
+        "id":1011,
+        "label": "蔬菜大棚是一种农田",
+        "from":30,
+        "to":35
+      },
+
+
+
+
+
+      {
+        "id":1012,
+        "label": "针叶林是一种森林",
+        "from":40,
+        "to":41
+      },
+      {
+        "id":1013,
+        "label": "阔叶林是一种森林",
+        "from":40,
+        "to":42
+      },
+      {
+        "id":1014,
+        "label": "混交林是一种森林",
+        "from":40,
+        "to":43
+      },
+      {
+        "id":1015,
+        "label": "热带雨林是一种森林",
+        "from":40,
+        "to":44
+      },
+      {
+        "id":1016,
+        "label": "针阔混交林是一种森林",
+        "from":40,
+        "to":45
+      },
+      {
+        "id":1017,
+        "label": "货船是一种船舶",
+        "from":50,
+        "to":51
+      },
+      {
+        "id":1018,
+        "label": "渔船是一种船舶",
+        "from":50,
+        "to":52
+      },
+      {
+        "id":1019,
+        "label": "游艇是一种船舶",
+        "from":50,
+        "to":53
+      },
+      {
+        "id":1020,
+        "label": "军舰是一种船舶",
+        "from":50,
+        "to":54
+      },
+      {
+        "id":1021,
+        "label": "客轮是一种船舶",
+        "from":50,
+        "to":55
+      },
+      {
+        "id":1022,
+        "label": "渡轮是一种船舶",
+        "from":50,
+        "to":56
+      },
+      {
+        "id":1023,
+        "label": "沼泽是一种湿地",
+        "from":60,
+        "to":61
+      },
+      {
+        "id":1024,
+        "label": "内陆湿地是一种湿地",
+        "from":60,
+        "to":62
+      },
+      {
+        "id":1025,
+        "label": "红树林是一种湿地",
+        "from":60,
+        "to":63
+      }
+    ]
+  }
+}
