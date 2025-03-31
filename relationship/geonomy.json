@@ -7,7 +7,7 @@
       {
         "label": "交通工具",
         "value": 15,
-        "id": 10,
+        "id": 100,
         "categories": [
           "Category"
         ],
@@ -16,7 +16,7 @@
       {
         "label": "水体",
         "value": 15,
-        "id": 20,
+        "id": 200,
         "categories": [
           "Category"
         ],
@@ -61,7 +61,7 @@
       {
         "label": "飞机",
         "value": 15,
-        "id":11,
+        "id":111,
         "categories": [
           "Category"
         ],
@@ -70,7 +70,7 @@
       {
         "label": "直升机",
         "value": 15,
-        "id":12,
+        "id":112,
         "categories": [
           "Category"
         ],
@@ -79,7 +79,7 @@
       {
         "label": "汽车",
         "value": 15,
-        "id":13,
+        "id":313,
         "categories": [
           "Category"
         ],
@@ -89,7 +89,7 @@
       {
         "label": "湖泊",
         "value": 15,
-        "id":21,
+        "id":221,
         "categories": [
           "Category"
         ],
@@ -98,7 +98,7 @@
       {
         "label": "河流",
         "value": 15,
-        "id":22,
+        "id":222,
         "categories": [
           "Category"
         ],
@@ -107,7 +107,7 @@
       {
         "label": "水库",
         "value": 15,
-        "id":23,
+        "id":223,
         "categories": [
           "Category"
         ],
@@ -116,7 +116,7 @@
       {
         "label": "人工水体",
         "value": 15,
-        "id":24,
+        "id":224,
         "categories": [
           "Category"
         ],
@@ -125,7 +125,7 @@
       {
         "label": "冰川",
         "value": 15,
-        "id":25,
+        "id":225,
         "categories": [
           "Category"
         ],
@@ -134,7 +134,7 @@
       {
         "label": "海洋",
         "value": 15,
-        "id":26,
+        "id":226,
         "categories": [
           "Category"
         ],
@@ -317,64 +317,258 @@
           "Category"
         ],
         "info": "{'name_en': '红树林', 'name': '红树林'}"
+      },
+      {
+        "label":"棒球场",
+        "value":7,
+        "id":1,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '棒球场', 'label': '棒球场'}"
+      },
+      {
+        "label":"操场",
+        "value":7,
+        "id":0,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '操场', 'label': '操场'}"
+      },
+      {
+        "label":"田径场",
+        "value":7,
+        "id":2,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '田径场', 'label': '田径场'}"
+      },
+
+      {
+        "label":"球场",
+        "value":7,
+        "id":4,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '球场', 'label': '球场'}"
+      },
+      {
+        "label":"足球场",
+        "value":7,
+        "id":5,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '足球场', 'label': '足球场'}"
+      },
+      {
+        "label":"游泳池",
+        "value":7,
+        "id":6,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '游泳池', 'label': '游泳池'}"
+      },
+      {
+        "label":"水",
+        "value":7,
+        "id":7,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '水', 'label': '水'}"
+      },
+      {
+        "label":"桥",
+        "value":7,
+        "id":8,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '桥', 'label': '桥'}"
+      },
+      {
+        "label":"海港",
+        "value":7,
+        "id":9,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '海港', 'label': '海港'}"
+      },
+      {
+        "label":"船",
+        "value":7,
+        "id":10,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '船', 'label': '船'}"
+      },
+      {
+        "label":"海港",
+        "value":7,
+        "id":11,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '海港', 'label': '海港'}"
+      },
+      
+      {
+        "label":"十字路口",
+        "value":7,
+        "id":13,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '十字路口', 'label': '十字路口'}"
+      },
+      {
+        "label":"郊外",
+        "value":7,
+        "id":14,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '郊外', 'label': '郊外'}"
+      },
+      {
+        "label":"油罐",
+        "value":7,
+        "id":15,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '油罐', 'label': '油罐'}"
+      },
+      {
+        "label":"集装箱",
+        "value":7,
+        "id":16,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '集装箱', 'label': '集装箱'}"
+      },
+      {
+        "label":"自行车",
+        "value":7,
+        "id":217,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '自行车', 'label': '自行车'}"
+      },
+
+      {
+        "label":"直升机升降坪",
+        "value":7,
+        "id":19,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '直升机升降坪', 'label': '直升机升降坪'}"
+      },
+      
+      {
+        "label":"机场",
+        "value":7,
+        "id":330,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '机场', 'label': '机场'}"
+      },
+      
+      {
+        "label":"人",
+        "value":7,
+        "id":523,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '人', 'label': '人'}"
+      },
+      {
+        "label":"环岛",
+        "value":7,
+        "id":24,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '环岛', 'label': '环岛'}"
+      },
+      {
+        "label":"街道",
+        "value":7,
+        "id":25,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '街道', 'label': '街道'}"
       }
     ],
     "edges": [
       {
         "id": 1000,
         "label": "飞机是一种交通工具",
-        "from": 10,
-        "to": 11
+        "from": 100,
+        "to": 111
       },
       {
         "id": 1001,
         "label": "直升机是一种交通工具",
-        "from": 10,
-        "to": 12
+        "from": 100,
+        "to": 112
       },
       {
-        "id": 1030,
+        "id": 1091,
         "label": "汽车是一种交通工具",
-        "from": 10,
-        "to": 13
+        "from": 100,
+        "to": 313
       },
 
 
       {
         "id": 1002,
         "label": "湖泊是一种水体",
-        "from": 20,
-        "to": 21
+        "from": 200,
+        "to": 221
       },
       {
         "id":1003,
         "label": "河流是一种水体",
-        "from":20,
-        "to":22
+        "from":200,
+        "to":222
       },
       {
-        "id":1004,
+        "id":1100,
         "label": "水库是一种水体",
-        "from":20,
-        "to":23
+        "from":200,
+        "to":223
       },
       {
         "id":1004,
         "label": "人工水体是一种水体",
-        "from":20,
-        "to":24
+        "from":200,
+        "to":224
       },
       {
         "id":1005,
         "label": "冰川是一种水体",
-        "from":20,
-        "to":25
+        "from":200,
+        "to":225
       },
       {
         "id":1006,
         "label": "海洋是一种水体",
-        "from":20,
-        "to":26
+        "from":200,
+        "to":226
       },
 
 
@@ -492,6 +686,148 @@
         "label": "内陆湿地是一种湿地",
         "from":60,
         "to":62
+      },
+      {
+        "id":0,
+        "label":"棒球场是一种操场",
+        "from":1,
+        "to":0
+      },
+      {
+        "id":1,
+        "label":"田径场是一种操场",
+        "from":2,
+        "to":0
+      },
+      {
+        "id":2,
+        "label":"棒球场是一种操场",
+        "from":3,
+        "to":0
+      },
+      {
+        "id":3,
+        "label":"球场是一种操场",
+        "from":4,
+        "to":0
+      },
+      {
+        "id":4,
+        "label":"足球场是一种操场",
+        "from":5,
+        "to":0
+      },
+      {
+        "id":5,
+        "label":"游泳池是一种水体",
+        "from":6,
+        "to":200
+      },
+      {
+        "id":6,
+        "label":"游泳池由水构成",
+        "from":7,
+        "to":6
+      },
+      {
+        "id":7,
+        "label":"水与桥有关联",
+        "from":8,
+        "to":7
+      },
+      {
+        "id":8,
+        "label":"海港由水构成",
+        "from":7,
+        "to":9
+      },
+      {
+        "id":9,
+        "label":"船依托于水",
+        "from":7,
+        "to":10
+      },
+      {
+        "id":10,
+        "label":"海港中包含船",
+        "from":10,
+        "to":11
+      },
+      {
+        "id":11,
+        "label":"船是一种交通工具",
+        "from":10,
+        "to":100
+      },
+      {
+        "id":1111,
+        "label":"十字路口与交通工具有关联",
+        "from":13,
+        "to":100
+      },
+      {
+        "id":13,
+        "label":"郊外与交通工具有关联",
+        "from":12,
+        "to":100
+      },
+      {
+        "id":14,
+        "label":"油罐位于郊外",
+        "from":14,
+        "to":15
+      },
+      {
+        "id":15,
+        "label":"集装箱位于郊外",
+        "from":14,
+        "to":16
+      },
+      {
+        "id":16,
+        "label":"自行车与交通工具有关联",
+        "from":217,
+        "to":100
+      },
+
+      {
+        "id":18,
+        "label":"直升机升降坪与直升机有关联",
+        "from":112,
+        "to":19
+      },
+      
+      
+      {
+        "id":21,
+        "label":"机场由飞机构成",
+        "from":330,
+        "to":111
+      },
+
+      {
+        "id":23,
+        "label":"人的出现或发生导致交通工具的出现或发生",
+        "from":523,
+        "to":100
+      },
+      {
+        "id":24,
+        "label":"环岛与交通工具有关联",
+        "from":12,
+        "to":100
+      },
+      {
+        "id":25,
+        "label":"环岛与街道有关联",
+        "from":25,
+        "to":24
+      },
+      {
+        "id":26,
+        "label":"街道与交通工具有关联",
+        "from":12,
+        "to":100
       },
       {
         "id":1025,
