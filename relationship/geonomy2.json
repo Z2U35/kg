@@ -138,6 +138,179 @@
           "Category"
         ],
         "info":"{'name_en': '日本阿尔卑斯山脉', 'name': '日本阿尔卑斯山脉'}"
+      },
+      {
+        "label":"不透水表面",
+        "value":9,
+        "id":0,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '不透水表面', 'label': '不透水表面'}"
+      },
+      {
+        "label":"汽车",
+        "value":9,
+        "id":47,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '汽车', 'label': '汽车'}"
+      },
+      {
+        "label":"船",
+        "value":9,
+        "id":1,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '船', 'label': '船'}"
+      },
+      {
+        "label":"港口",
+        "value":9,
+        "id":48,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '港口', 'label': '港口'}"
+      },
+      {
+        "label":"桥",
+        "value":9,
+        "id":51,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '桥', 'label': '桥'}"
+      },
+      {
+        "label":"道路",
+        "value":9,
+        "id":2,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '道路', 'label': '道路'}"
+      },
+      {
+        "label":"油罐",
+        "value":9,
+        "id":3,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '油罐', 'label': '油罐'}"
+      },
+
+      {
+        "label":"建筑物",
+        "value":9,
+        "id":5,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '建筑物', 'label': '建筑物'}"
+      },
+      {
+        "label":"人行道",
+        "value":9,
+        "id":6,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '人行道', 'label': '人行道'}"
+      },
+      {
+        "label":"墙",
+        "value":9,
+        "id":7,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '墙', 'label': '墙'}"
+      },
+      {
+        "label":"树木",
+        "value":9,
+        "id":8,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '树木', 'label': '树木'}"
+      },
+      {
+        "label":"水",
+        "value":9,
+        "id":9,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '水', 'label': '水'}"
+      },
+      {
+        "label":"蔬菜",
+        "value":9,
+        "id":10,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '蔬菜', 'label': '蔬菜'}"
+      },
+      {
+        "label":"游泳池",
+        "value":9,
+        "id":11,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '游泳池', 'label': '游泳池'}"
+      },
+      
+      {
+        "label":"直升机",
+        "value":9,
+        "id":13,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '直升机', 'label': '直升机'}"
+      },
+      {
+        "label":"飞机",
+        "value":9,
+        "id":14,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '飞机', 'label': '飞机'}"
+      },
+      {
+        "label":"天空",
+        "value":9,
+        "id":15,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '天空', 'label': '天空'}"
+      },
+      {
+        "label":"环岛",
+        "value":9,
+        "id":49,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '环岛', 'label': '环岛'}"
+      },
+      {
+        "label":"操场",
+        "value":9,
+        "id":50,
+        "categories":[
+          "Category"
+        ],
+        "info":"{'name_en': '操场', 'label': '操场'}"
       }
     ],
     "edges": [
@@ -218,6 +391,144 @@
         "label":"元子河是一种河流",
         "from":6328,
         "to":9394
+      },
+      {
+        "id":0,
+        "label":"汽车与不透水表面有关联",
+        "from":0,
+        "to":47
+      },
+      {
+        "id":1,
+        "label":"港口中包含船",
+        "from":1,
+        "to":48
+      },
+      {
+        "id":2,
+        "label":"道路与桥相连",
+        "from":51,
+        "to":2
+      },
+      {
+        "id":3,
+        "label":"油罐位于道路",
+        "from":2,
+        "to":3
+      },
+      {
+        "id":4,
+        "label":"impervious surface和道路相邻",
+        "from":2,
+        "to":4
+      },
+      {
+        "id":5,
+        "label":"建筑物和道路相邻",
+        "from":2,
+        "to":5
+      },
+      {
+        "id":6,
+        "label":"建筑物距离人行道近",
+        "from":6,
+        "to":5
+      },
+      {
+        "id":7,
+        "label":"墙是建筑物的一部分",
+        "from":7,
+        "to":5
+      },
+      {
+        "id":8,
+        "label":"树木距离墙近",
+        "from":7,
+        "to":8
+      },
+      {
+        "id":9,
+        "label":"树木与道路有关联",
+        "from":2,
+        "to":8
+      },
+      {
+        "id":10,
+        "label":"树木的生存基于水",
+        "from":9,
+        "to":8
+      },
+      {
+        "id":11,
+        "label":"蔬菜的生存基于水",
+        "from":9,
+        "to":10
+      },
+      {
+        "id":12,
+        "label":"蔬菜与树木有关联",
+        "from":8,
+        "to":10
+      },
+      {
+        "id":13,
+        "label":"游泳池由水构成",
+        "from":9,
+        "to":11
+      },
+      {
+        "id":14,
+        "label":"impervious与建筑物有关联",
+        "from":5,
+        "to":12
+      },
+      {
+        "id":15,
+        "label":"直升机与impervious surface有关联",
+        "from":4,
+        "to":13
+      },
+      {
+        "id":16,
+        "label":"直升机与飞机有关联",
+        "from":14,
+        "to":13
+      },
+      {
+        "id":17,
+        "label":"天空与飞机有关联",
+        "from":14,
+        "to":15
+      },
+      {
+        "id":18,
+        "label":"天空与直升机有关联",
+        "from":13,
+        "to":15
+      },
+      {
+        "id":50,
+        "label":"汽车与港口有关联",
+        "from":48,
+        "to":47
+      },
+      {
+        "id":51,
+        "label":"汽车与环岛有关联",
+        "from":49,
+        "to":47
+      },
+      {
+        "id":52,
+        "label":"汽车与操场有关联",
+        "from":50,
+        "to":47
+      },
+      {
+        "id":53,
+        "label":"汽车与桥有关联",
+        "from":51,
+        "to":47
       }
     ]
   }
