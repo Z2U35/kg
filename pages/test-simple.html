@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>简单测试 - 上下位500</title>
+    <script src="../lib/interactive-graph-0.1.0/interactive-graph.min.js"></script>
+    <link rel="stylesheet" href="../lib/interactive-graph-0.1.0/interactive-graph.min.css">
+</head>
+<body>
+    <h1>测试页面 - 直接加载</h1>
+    <div id="status"></div>
+    <div id="graphArea" style="width: 100%; height: 600px; border: 1px solid #ccc;"></div>
+
+    <script>
+        const status = document.getElementById('status');
+        status.innerHTML = '<p>正在初始化图谱...</p>';
+
+        try {
+            igraph.i18n.setLanguage("chs");
+            const app = new igraph.GraphNavigator(document.getElementById('graphArea'), 'LIGHT');
+
+            status.innerHTML += '<p>正在加载 JSON: ../relationship/上下位500.json</p>';
+
+            app.loadGson("../relationship/上下位500.json", {
+                "onGetNodeDescription": function (node) {
+                    var description = "<p align=center>";
+                    if (node.image !== undefined) {
+                        description += "<img src='" + node.image + "' width=150/><br>";
+                    }
+                    description += "<b>" + node.label + "</b>" + "[" + node.id + "]";
+                    description += "</p>";
+                    if (node.info !== undefined) {
+                        description += "<p align=left>" + node.info + "</p>";
+                    } else {
+                        if (node.title !== undefined)
+                            description += "<p align=left>" + node.title + "</p>";
+                    }
+                    return description;
+                }
+            }, function () {
+                status.innerHTML += '<p style="color: green;">✓ 图谱加载成功！</p>';
+            });
+        } catch (error) {
+            status.innerHTML += '<p style="color: red;">✗ 错误: ' + error.message + '</p>';
+            console.error('Error:', error);
+        }
+    </script>
+</body>
+</html>

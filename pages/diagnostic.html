@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>配置诊断</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .error { color: red; }
+        .success { color: green; }
+        table { border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>页面配置诊断工具</h1>
+    <div id="output"></div>
+
+    <script src="js/page-config.js"></script>
+    <script>
+        const output = document.getElementById('output');
+
+        // 检查 PAGE_CONFIG 是否存在
+        if (typeof PAGE_CONFIG === 'undefined') {
+            output.innerHTML += '<p class="error">错误: PAGE_CONFIG 未定义！</p>';
+        } else {
+            output.innerHTML += '<p class="success">✓ PAGE_CONFIG 已加载</p>';
+
+            // 显示配置数量
+            const configCount = Object.keys(PAGE_CONFIG).length;
+            output.innerHTML += `<p>配置数量: ${configCount}</p>`;
+
+            // 创建表格显示所有配置
+            let table = '<table><tr><th>文件名</th><th>图谱类型</th><th>JSON路径</th><th>hasVariants</th></tr>';
+
+            for (const [filename, config] of Object.entries(PAGE_CONFIG)) {
+                table += `<tr>
+                    <td>${filename}</td>
+                    <td>${config.graphType}</td>
+                    <td>${config.jsonPath}</td>
+                    <td>${config.hasVariants !== false ? '是' : '否'}</td>
+                </tr>`;
+            }
+
+            table += '</table>';
+            output.innerHTML += table;
+
+            // 测试 getCurrentPageConfig
+            output.innerHTML += '<h2>测试 getCurrentPageConfig</h2>';
+
+            const testFiles = [
+                '上下位500.html',
+                '产出500.html',
+                '交通工具.html',
+                'geonomy.html'
+            ];
+
+            testFiles.forEach(filename => {
+                const hasConfig = PAGE_CONFIG.hasOwnProperty(filename);
+                const configExists = hasConfig ? '✓ 存在' : '✗ 不存在';
+                const className = hasConfig ? 'success' : 'error';
+                output.innerHTML += `<p class="${className}">${filename}: ${configExists}</p>`;
+
+                if (hasConfig) {
+                    const config = PAGE_CONFIG[filename];
+                    output.innerHTML += `<pre>  类型: ${config.graphType}, JSON: ${config.jsonPath}</pre>`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

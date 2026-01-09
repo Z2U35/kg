@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时诊断 - 页面配置匹配</title>
+    <script type="text/javascript" src="../lib/interactive-graph-0.1.0/interactive-graph.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../lib/interactive-graph-0.1.0/interactive-graph.min.css">
+    <script src="../lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../lib/jquery-3.2.1/jquery-ui.css">
+    <script src="../lib/jquery-3.2.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/graph-viewer.css">
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            background: #0a0e27;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #00d9ff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+        }
+        h2 {
+            color: #ec4899;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(236, 72, 153, 0.3);
+        }
+        .success {
+            color: #10b981;
+            font-weight: bold;
+        }
+        .error {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        .warning {
+            color: #f59e0b;
+            font-weight: bold;
+        }
+        .info {
+            color: #60a5fa;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            border-left: 3px solid #00d9ff;
+        }
+        .btn {
+            background: linear-gradient(135deg, #00d9ff 0%, #9333ea 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 217, 255, 0.4);
+        }
+        .test-result {
+            margin: 10px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 实时诊断 - 页面配置匹配</h1>
+
+    <div class="section">
+        <h2>📍 当前页面信息</h2>
+        <div id="pageInfo"></div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 配置匹配结果</h2>
+        <div id="matchResult"></div>
+    </div>
+
+    <div class="section">
+        <h2>🔬 测试其他页面</h2>
+        <button class="btn" onclick="testAndNavigate('上下位.html')">测试 上下位.html</button>
+        <button class="btn" onclick="testAndNavigate('上下位500.html')">测试 上下位500.html</button>
+        <button class="btn" onclick="testAndNavigate('产出.html')">测试 产出.html</button>
+        <button class="btn" onclick="testAndNavigate('因果500.html')">测试 因果500.html</button>
+        <div id="testResults" style="margin-top: 20px;"></div>
+    </div>
+
+    <div class="section">
+        <h2>📊 完整控制台日志</h2>
+        <div class="code" id="consoleLog"></div>
+    </div>
+
+    <script src="js/page-config.js"></script>
+    <script>
+        // 捕获控制台输出
+        var originalLog = console.log;
+        var originalWarn = console.warn;
+        var originalError = console.error;
+        var logBuffer = [];
+
+        function captureLog(level, args) {
+            var msg = Array.from(args).map(function(arg) {
+                return typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg);
+            }).join(' ');
+            logBuffer.push('[' + level + '] ' + msg);
+            updateConsoleLog();
+        }
+
+        console.log = function() {
+            originalLog.apply(console, arguments);
+            captureLog('LOG', arguments);
+        };
+
+        console.warn = function() {
+            originalWarn.apply(console, arguments);
+            captureLog('WARN', arguments);
+        };
+
+        console.error = function() {
+            originalError.apply(console, arguments);
+            captureLog('ERROR', arguments);
+        };
+
+        function updateConsoleLog() {
+            document.getElementById('consoleLog').textContent = logBuffer.join('\n');
+        }
+
+        // 显示页面信息
+        function displayPageInfo() {
+            var info = document.getElementById('pageInfo');
+            var html = '';
+
+            html += '<div class="test-result">';
+            html += '<strong class="info">window.location.href:</strong><br>';
+            html += '<code>' + window.location.href + '</code>';
+            html += '</div>';
+
+            html += '<div class="test-result">';
+            html += '<strong class="info">window.location.pathname:</strong><br>';
+            html += '<code>' + window.location.pathname + '</code>';
+            html += '</div>';
+
+            html += '<div class="test-result">';
+            html += '<strong class="info">提取的文件名:</strong><br>';
+            html += '<code>' + window.location.pathname.split('/').pop() + '</code>';
+            html += '</div>';
+
+            try {
+                var decoded = decodeURIComponent(window.location.pathname.split('/').pop());
+                html += '<div class="test-result">';
+                html += '<strong class="info">解码后的文件名:</strong><br>';
+                html += '<code>' + decoded + '</code>';
+                html += '</div>';
+            } catch(e) {
+                html += '<div class="test-result error">';
+                html += '解码失败: ' + e.message;
+                html += '</div>';
+            }
+
+            info.innerHTML = html;
+        }
+
+        // 显示匹配结果
+        function displayMatchResult() {
+            var result = document.getElementById('matchResult');
+            var html = '';
+
+            if (typeof getCurrentPageConfig === 'undefined') {
+                html += '<div class="test-result error">';
+                html += '❌ getCurrentPageConfig 函数未加载';
+                html += '</div>';
+                result.innerHTML = html;
+                return;
+            }
+
+            var config = getCurrentPageConfig();
+
+            html += '<div class="test-result">';
+            if (config.graphType === 'unknown') {
+                html += '<div class="error">❌ 配置匹配失败</div>';
+            } else {
+                html += '<div class="success">✅ 配置匹配成功</div>';
+            }
+            html += '</div>';
+
+            html += '<div class="code">';
+            html += '<strong>匹配到的配置:</strong><br><br>';
+            html += 'graphType: ' + config.graphType + '<br>';
+            html += 'nodeCount: ' + config.nodeCount + '<br>';
+            html += 'jsonPath: ' + config.jsonPath + '<br>';
+            html += 'title: ' + config.title;
+            html += '</div>';
+
+            // 测试JSON加载
+            if (config.graphType !== 'unknown') {
+                html += '<div class="test-result">';
+                html += '<strong class="info">正在测试JSON加载...</strong>';
+                html += '</div>';
+                html += '<div id="jsonTest"></div>';
+
+                result.innerHTML = html;
+
+                fetch(config.jsonPath)
+                    .then(function(response) {
+                        if (!response.ok) {
+                            throw new Error('HTTP ' + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        document.getElementById('jsonTest').innerHTML =
+                            '<div class="test-result success">✅ JSON加载成功！数据大小: ' +
+                            JSON.stringify(data).length + ' 字符</div>';
+                    })
+                    .catch(function(error) {
+                        document.getElementById('jsonTest').innerHTML =
+                            '<div class="test-result error">❌ JSON加载失败: ' + error.message + '</div>';
+                    });
+            } else {
+                result.innerHTML = html;
+            }
+        }
+
+        // 测试并导航到其他页面
+        function testAndNavigate(filename) {
+            var testResults = document.getElementById('testResults');
+            testResults.innerHTML = '<div class="test-result warning">正在跳转到 ' + filename + '...</div>';
+
+            setTimeout(function() {
+                window.location.href = filename;
+            }, 500);
+        }
+
+        // 页面加载后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            displayPageInfo();
+            displayMatchResult();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>详细诊断</title>
+    <script type="text/javascript" src="../lib/interactive-graph-0.1.0/interactive-graph.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../lib/interactive-graph-0.1.0/interactive-graph.min.css">
+    <script src="../lib/jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="../lib/jquery-3.2.1/jquery-ui.css">
+    <script src="../lib/jquery-3.2.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/graph-viewer.css">
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+        h1 { color: #00d9ff; }
+        h2 { color: #ec4899; margin-top: 20px; }
+        .success { color: #10b981; font-weight: bold; }
+        .error { color: #ef4444; font-weight: bold; }
+        .warning { color: #f59e0b; font-weight: bold; }
+        .info { color: #60a5fa; }
+        #results div { padding: 2px 0; }
+        pre { background: #0f172a; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover { background: #2563eb; }
+    </style>
+</head>
+<body>
+    <h1>🔍 详细诊断报告</h1>
+
+    <button class="btn" onclick="location.reload()">🔄 刷新诊断</button>
+    <button class="btn" onclick="testSpecificPage()">🧪 测试上下位.html</button>
+
+    <div id="results"></div>
+
+    <script src="js/page-config.js"></script>
+    <script>
+        const results = document.getElementById('results');
+
+        function log(msg, type) {
+            const className = type || '';
+            results.innerHTML += '<div class="' + className + '">' + msg + '</div>';
+            console.log(msg);
+        }
+
+        log('<h2>📍 第1步：路径信息</h2>');
+        log('- window.location.href: ' + window.location.href, 'info');
+        log('- window.location.pathname: ' + window.location.pathname, 'info');
+        log('- 文件名: ' + window.location.pathname.split(\'/\').pop(), 'info');
+        try {
+            log('- 解码后: ' + decodeURIComponent(window.location.pathname.split(\'/\').pop()), 'info');
+        } catch(e) {
+            log('- 解码失败: ' + e.message, 'error');
+        }
+        log('');
+
+        log('<h2>🔧 第2步：检查库加载</h2>');
+        log('- jQuery: ' + (typeof $ !== 'undefined' ? '✅ 已加载' : '❌ 未加载'), typeof $ !== 'undefined' ? 'success' : 'error');
+        log('- igraph: ' + (typeof igraph !== 'undefined' ? '✅ 已加载' : '❌ 未加载'), typeof igraph !== 'undefined' ? 'success' : 'error');
+        log('');
+
+        log('<h2>📋 第3步：检查配置</h2>');
+        log('- PAGE_CONFIG: ' + (typeof PAGE_CONFIG !== 'undefined' ? '✅ 已加载' : '❌ 未加载'), typeof PAGE_CONFIG !== 'undefined' ? 'success' : 'error');
+
+        if (typeof PAGE_CONFIG !== 'undefined') {
+            const configKeys = Object.keys(PAGE_CONFIG);
+            log('- 配置数量: ' + configKeys.length + ' 个页面', 'success');
+            log('- 前10个配置:');
+            configKeys.slice(0, 10).forEach(function(key) {
+                log('  · ' + key, 'info');
+            });
+        }
+        log('');
+
+        log('<h2>🎯 第4步：当前页面配置</h2>');
+        if (typeof getCurrentPageConfig !== 'undefined') {
+            const config = getCurrentPageConfig();
+            log('- graphType: ' + config.graphType, config.graphType !== 'unknown' ? 'success' : 'error');
+            log('- nodeCount: ' + config.nodeCount, 'info');
+            log('- jsonPath: ' + config.jsonPath, 'info');
+            log('- title: ' + config.title, 'info');
+
+            if (config.graphType === 'unknown') {
+                log('', '');
+                log('⚠️  警告：找不到当前页面的配置！', 'warning');
+                log('可能的原因：', 'warning');
+                log('1. 文件名不在 PAGE_CONFIG 中', 'warning');
+                log('2. 文件名编码问题', 'warning');
+                log('3. 路径解析错误', 'warning');
+            }
+        } else {
+            log('❌ getCurrentPageConfig 函数未找到', 'error');
+        }
+        log('');
+
+        log('<h2>🧪 第5步：测试实际页面</h2>');
+        log('<button class="btn" onclick="testPage(\'上下位.html\')">测试 上下位.html</button>');
+        log('<button class="btn" onclick="testPage(\'上下位500.html\')">测试 上下位500.html</button>');
+        log('<button class="btn" onclick="testPage(\'产出.html\')">测试 产出.html</button>');
+        log('');
+
+        function testPage(filename) {
+            log('<h2>🔬 测试页面: ' + filename + '</h2>');
+
+            if (typeof PAGE_CONFIG === 'undefined') {
+                log('❌ PAGE_CONFIG 未定义', 'error');
+                return;
+            }
+
+            const config = PAGE_CONFIG[filename];
+            if (!config) {
+                log('❌ 配置不存在: ' + filename, 'error');
+                log('尝试列出所有配置...', 'info');
+                Object.keys(PAGE_CONFIG).forEach(function(key) {
+                    if (key.indexOf('上下位') !== -1 || key.indexOf('产出') !== -1) {
+                        log('  · ' + key, 'info');
+                    }
+                });
+                return;
+            }
+
+            log('✅ 找到配置', 'success');
+            log('- graphType: ' + config.graphType, 'info');
+            log('- jsonPath: ' + config.jsonPath, 'info');
+
+            log('正在测试 JSON 加载...', 'info');
+            fetch(config.jsonPath)
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(function(data) {
+                    log('✅ JSON 加载成功！', 'success');
+                    log('数据大小: ' + JSON.stringify(data).length + ' 字符', 'success');
+                })
+                .catch(function(error) {
+                    log('❌ JSON 加载失败: ' + error.message, 'error');
+                });
+        }
+
+        function testSpecificPage() {
+            testPage('上下位.html');
+        }
+    </script>
+</body>
+</html>

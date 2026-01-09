@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+</head>
+<body>
+    <h1>配置测试</h1>
+    <div id="info"></div>
+
+    <script>
+        // 直接内联配置进行测试
+        const TEST_CONFIG = {
+            '上下位500.html': { graphType: '上下位', nodeCount: '500', jsonPath: '../relationship/上下位500.json', title: '上下位 知识图谱' },
+            '产出500.html': { graphType: '产出', nodeCount: '500', jsonPath: '../relationship/产出500.json', title: '产出 知识图谱' }
+        };
+
+        const info = document.getElementById('info');
+        info.innerHTML = '<h2>内联配置测试:</h2>';
+
+        for (const [key, value] of Object.entries(TEST_CONFIG)) {
+            info.innerHTML += `<p>文件: ${key} => 类型: ${value.graphType}</p>`;
+        }
+
+        // 测试当前页面路径解析
+        const currentPage = window.location.pathname.split('/').pop();
+        info.innerHTML += `<p>当前页面: ${currentPage}</p>`;
+
+        // 测试配置查找
+        const hasConfig = TEST_CONFIG.hasOwnProperty('上下位500.html');
+        info.innerHTML += `<p>能找到'上下位500.html': ${hasConfig ? '是' : '否'}</p>`;
+    </script>
+
+    <script src="js/page-config.js"></script>
+    <script>
+        info.innerHTML += '<h2>外部文件配置测试:</h2>';
+
+        if (typeof PAGE_CONFIG !== 'undefined') {
+            info.innerHTML += `<p>配置数量: ${Object.keys(PAGE_CONFIG).length}</p>`;
+
+            // 显示前5个配置
+            let count = 0;
+            for (const [key, value] of Object.entries(PAGE_CONFIG)) {
+                if (count++ < 5) {
+                    info.innerHTML += `<p>文件: ${key} => 类型: ${value.graphType}</p>`;
+                }
+            }
+
+            // 测试特定文件
+            const testKey = '上下位500.html';
+            const hasConfig = PAGE_CONFIG.hasOwnProperty(testKey);
+            info.innerHTML += `<p>能找到'${testKey}': ${hasConfig ? '是' : '否'}</p>`;
+
+            if (!hasConfig) {
+                info.innerHTML += '<p style="color:red">错误！配置文件中的键可能已损坏</p>';
+                info.innerHTML += '<p>实际的键:</p><ul>';
+                for (const key of Object.keys(PAGE_CONFIG).slice(0, 10)) {
+                    // 显示键的字节
+                    const bytes = [];
+                    for (let i = 0; i < Math.min(key.length, 20); i++) {
+                        bytes.push(key.charCodeAt(i).toString(16));
+                    }
+                    info.innerHTML += `<li>${key} [${bytes.join(' ')}]</li>`;
+                }
+                info.innerHTML += '</ul>';
+            }
+        } else {
+            info.innerHTML += '<p style="color:red">PAGE_CONFIG 未定义!</p>';
+        }
+    </script>
+</body>
+</html>
